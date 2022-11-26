@@ -1,7 +1,8 @@
+console.log(magazines);
 const magazinesList = [
-    "https://api.rss2json.com/v1/api.json?rss_url=https://flipboard.com/@thenewsdesk/the-latest-on-coronavirus-covid-19-t82no8kmz.rss",
-    "https://api.rss2json.com/v1/api.json?rss_url=https://flipboard.com/@dfletcher/india-tech-b2meqpd6z.rss",
-    "https://api.rss2json.com/v1/api.json?rss_url=https://flipboard.com/@thehindu/sportstarlive-rj3ttinvz.rss"
+    `https://api.rss2json.com/v1/api.json?rss_url=${magazines[0]}`,
+    `https://api.rss2json.com/v1/api.json?rss_url=${magazines[1]}`,
+    `https://api.rss2json.com/v1/api.json?rss_url=${magazines[2]}`
   ];
 
   async function getJSON(arr) {
@@ -39,19 +40,50 @@ const magazinesList = [
     let accordionHeader = document.getElementById(`heading${index}`);
     accordionHeader.innerHTML = element.feed.title;
 
+   
+
     // Set Carousels inside the Accordion
+    const topics = element.items;
+    
+    let carouselInner = document.getElementById(`carousel-inner-${index}`);
+    carouselInner.innerHTML="";
 
-    setCarousels();
+    for(let i=0; i< topics.length; i++){          
+          let carouselItem = document.createElement("div");
+          if(i==0){
+            carouselItem.classList.add("carousel-item","active");
+          }
+          else{
+            carouselItem.classList.add("carousel-item");
+          }   
+
+          let dateWithTime = topics[i].pubDate;      
+          let date = new Date(dateWithTime).toLocaleDateString('EN-SA');
+
+          carouselItem.innerHTML= `<a href="${topics[i].link}" target = "_blank">
+          <div class="card">
+          <img src= ${topics[i].enclosure.link} class="d-block w-100 card-img-top" style="max-height:462px; object-fit:cover;">
+          <div class="card-body">
+          <p class= "slide-heading-text">${topics[i].title}</p> 
+          <p class="author">${topics[i].author}   <span class="dot"></span>   ${date}</p>
+          <p class = "slide-desc card-text">${topics[i].description}</p>
+          </div>
+          </div>
+          </a>
+          `;
+          
 
 
+          //append each carousel item to carousel inner
+          carouselInner.append(carouselItem);
 
-    // Write the function to set Carousels
-
-    function setCarousels(){
-
-
+        }
       
-    }
+
+
+
+
+
 
   });
 

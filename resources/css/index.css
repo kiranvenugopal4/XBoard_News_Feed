@@ -87,3 +87,69 @@ border-radius: 4.5px;
     font-family: "Font Awesome 5 Free";
     padding-right: 12px;
   }
+
+  .dot{
+    height:5px;
+    width: 5px;
+    position:relative;
+    bottom: 2px;
+    margin: 0px 5px;
+    background: #586069;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  img{
+    padding-bottom: 20px;
+  }
+
+  .slide-heading-text{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    color: #292B2E;
+  }
+
+  .author{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .slide-desc{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+
+  }
+
+  .card{
+    max-width: 1172px;
+    max-height: 630px;
+  }
+
+  a:link{
+    text-decoration: none;
+     
+  }
+
+  a:visited{
+    text-decoration: none;
+     
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+
+  a:active{
+    text-decoration: none;
+  }
+
+  a p{
+    color: black;
+  }
+
+  
