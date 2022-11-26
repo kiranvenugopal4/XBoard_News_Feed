@@ -1,0 +1,89 @@
+/* .navbar-heading-text{
+position: relative;
+width: 211px;
+height: 24px;
+left: 0px;
+top: 36px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 23px;
+line-height: 24px;
+
+
+
+}
+
+
+
+
+
+background: linear-gradient(96.34deg, #E537B9 0%, #C040DF 100%);
+border-radius: 4.5px;
+}
+
+.navbar{
+    position: absolute;
+width: 1322px;
+height: 91px;
+left: 59px;
+top: 0px;
+
+background: #FFFFFF;
+}
+
+
+
+
+
+border: 1px solid #E1E4E8;
+}
+
+.body-head{
+width: 74px;
+height: 32px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+
+color: #252B42;
+}
+
+
+
+.body-subhead{
+width: 331px;
+height: 28px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+
+
+
+color: #858585;
+} */
+
+
+.rectangle-logo {
+position: relative;
+width: 27px;
+height: 9px;
+left: 1px;
+top: 0px;
+background: linear-gradient(96.34deg, #E537B9 0%, #C040DF 100%);
+border-radius: 4.5px;
+}
+
+.accordion-button.collapsed::after {
+    content: "\f058";
+    color: green;
+    font-weight: 400;
+    font-family: "Font Awesome 5 Free";
+    padding-right: 12px;
+  }
